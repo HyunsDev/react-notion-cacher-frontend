@@ -14,6 +14,13 @@ const LogoDiv = styled.div`
     display: flex;
     align-items: center;
     gap: 8px;
+    font-family: "Poppins", sans-serif;
+`;
+const LogoText = styled.h1`
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    color: #2d6560;
 `;
 const LogoImg = styled.img`
     height: 20px;
@@ -36,9 +43,7 @@ export function Header() {
         <SimpleHeader>
             <LogoDiv>
                 <LogoImg src="/assets/logo.png" />
-                <Text size="16px" weight="semibold">
-                    React Notion Cacher
-                </Text>
+                <LogoText>React Notion Cacher</LogoText>
             </LogoDiv>
             {!localStorage.getItem("token") && (
                 <Button onClick={() => navigate("/auth/signin")}>로그인</Button>
